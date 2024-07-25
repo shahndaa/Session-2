@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
+
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
 
@@ -38,50 +39,88 @@ class _MyHomePageState extends State<MyHomePage> {
       body:  Center(
 
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
           children: <Widget>[
-            Container(
-              height: 200 ,
-              width: 200 ,
-              color: Colors.white,
-              child:const Center(
-                child: Text(
-                  "WE" , style:TextStyle(
-                  fontWeight: FontWeight.bold ,
-                  color: Colors.black ,
-                  fontSize: 20,
-                ) ,
+            Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: <Widget>[
+                const SizedBox(
+                  height: 10,
                 ),
-              ),
+                Container(
+                  height: 100,
+                  width: 100,
+                  color: Colors.green,
+                ),
+              ],
             ),
-            Container(
-                height: 200 ,
-                width: 200 ,
-                color: Colors.white ,
-                child:const Center(
-                  child: Text(
-                    "LOVE" , style:TextStyle(
-                    fontWeight: FontWeight.bold ,
-                    color: Colors.black ,
-                    fontSize: 20,
-                  ) ,
-                  ),
-                )
+            Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: <Widget>[
+                Container(
+                  height: 100,
+                  width: 100,
+                  color: Colors.orange[800],
+                ),
+              ],
             ),
-            Container(
-                height: 200 ,
-                width: 200 ,
-                color: Colors.white ,
-                child:const Center(
-                  child: Text(
-                    "FLUTTER" , style:TextStyle(
-                    fontWeight: FontWeight.bold ,
-                    color: Colors.black ,
-                    fontSize: 20,
-                  ) ,
-                  ),
-                )
+            Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Container(
+                    height: 100,
+                    width: 100,
+                    color: Colors.red
+                ),
+                Container(
+                    height: 100,
+                    width: 100,
+                    color: Colors.black
+                ),
+                Container(
+                    height: 100,
+                    width: 100,
+                    color: Colors.yellow
+                ),
+                Container(
+                    height: 100,
+                    width: 100,
+                    color: Colors.white
+                ),
+                Container(
+                  height: 100,
+                  width: 100,
+                  color: Colors.white,
+                ),
+
+              ],
             ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Container(
+                  height: 100,
+                  width: 100,
+                  color: Colors.lightBlue,
+                ),
+              ],
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                const SizedBox(
+                  height: 10,
+                ),
+                Container(
+                  height: 100,
+                  width: 100,
+                  color: Colors.purple[800],
+                ),
+
+              ],
+            )
 
           ],
         ),
