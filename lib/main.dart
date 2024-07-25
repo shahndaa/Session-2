@@ -20,7 +20,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
 
@@ -39,88 +38,114 @@ class _MyHomePageState extends State<MyHomePage> {
       body:  Center(
 
         child: Row(
-           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+         // crossAxisAlignment: CrossAxisAlignment.
           children: <Widget>[
-            Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: <Widget>[
-                const SizedBox(
-                  height: 10,
-                ),
-                Container(
-                  height: 100,
-                  width: 100,
-                  color: Colors.green,
-                ),
-              ],
-            ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: <Widget>[
-                Container(
-                  height: 100,
-                  width: 100,
-                  color: Colors.orange[800],
-                ),
-              ],
-            ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                Container(
-                    height: 100,
-                    width: 100,
-                    color: Colors.red
-                ),
-                Container(
-                    height: 100,
-                    width: 100,
-                    color: Colors.black
-                ),
-                Container(
-                    height: 100,
-                    width: 100,
-                    color: Colors.yellow
-                ),
-                Container(
-                    height: 100,
-                    width: 100,
-                    color: Colors.white
-                ),
-                Container(
-                  height: 100,
-                  width: 100,
-                  color: Colors.white,
-                ),
+           Container(
+             height: 300,
+             width: 300,
+             color: Colors.white,
+             child: Column(
+               mainAxisAlignment: MainAxisAlignment.center,
+               children: [
+                 const Text("The More You Practice .. The Less You Fail"),
+                 const SizedBox(
+                   height: 10,
+                 ),
+                 Row(
+                   mainAxisAlignment: MainAxisAlignment.spaceAround,
+                   children: [
+                     ElevatedButton(onPressed: (){},
+                       style: ElevatedButton.styleFrom(backgroundColor: Colors.pink[50]), child:  Text("Agree"
+                      , style: TextStyle(color: Colors.purple[300]),),),
+                     ElevatedButton(onPressed: (){},
+                         style: ElevatedButton.styleFrom(backgroundColor: Colors.pink[50]), child: Text("do not agree"
+                     , style: TextStyle(color: Colors.purple[300]),) ),
 
-              ],
-            ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Container(
-                  height: 100,
-                  width: 100,
-                  color: Colors.lightBlue,
-                ),
-              ],
-            ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                const SizedBox(
-                  height: 10,
-                ),
-                Container(
-                  height: 100,
-                  width: 100,
-                  color: Colors.purple[800],
-                ),
+                   ],
+                 )
+               ],
+             ),
+           ),
+            Container(
+              height: 300,
+              width: 300,
+              color: Colors.white,
+              child: Column(
+                 mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text("Code"),
+                      Icon(Icons.code),
+              ]
+                  ),
+                  const Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text("Eat"),
+                        Icon(Icons.restaurant),
+                      ]
+                  ),
+                  const Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text("sleep"),
+                        Icon(Icons.single_bed),
+                        ],
+                  ),
+                        const Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text("Repeat"),
+                              Icon(Icons.repeat),
+                            ]
+                        ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      ElevatedButton(onPressed: (){},
+                        style: ElevatedButton.styleFrom(backgroundColor: Colors.pink[50]), child:  Text("Agree"
+                          , style: TextStyle(color: Colors.purple[300]),),),
+                      ElevatedButton(onPressed: (){},
+                          style: ElevatedButton.styleFrom(backgroundColor: Colors.pink[50]), child: Text("do not agree"
+                            , style: TextStyle(color: Colors.purple[300]),) ),
 
-              ],
-            )
+                    ],
+                  )
+                      ]
+                  ),
+            ),
+            Container(
+              height: 300,
+              width: 300,
+              color: Colors.white,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text("The More You Fail .. The More you learn"),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      ElevatedButton(onPressed: (){},
+                        style: ElevatedButton.styleFrom(backgroundColor: Colors.pink[50]), child:  Text("Agree"
+                          , style: TextStyle(color: Colors.purple[300]),),),
+                      ElevatedButton(onPressed: (){},
+                          style: ElevatedButton.styleFrom(backgroundColor: Colors.pink[50]), child: Text("do not agree"
+                            , style: TextStyle(color: Colors.purple[300]),) ),
+
+                    ],
+                  )
+                ],
+              ),
+            ),
 
           ],
         ),
